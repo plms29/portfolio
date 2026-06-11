@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Name — Portfolio</title> <!-- REPLACE: set to your name -->
+  <meta name="description" content="Portfolio of a Grade-12 student building technology that makes learning accessible."> <!-- REPLACE -->
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Fonts: Inter (body + display), IBM Plex Mono (small labels), Silkscreen + Press Start 2P (logo + badge pixel accents) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Silkscreen:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="starfield" class="bg-constellation" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================ NAV ============================ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__brand" data-content="initials" aria-label="Home">SN</a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#academics">Academics</a>
+        <a href="#badges">Badges</a>
+        <a href="#projects">Projects</a>
+        <a href="#gallery">Photos</a>
+        <a href="#beyond">Beyond</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile slide-in menu -->
+    <nav class="nav__mobile" id="mobileMenu" aria-label="Mobile" hidden>
+      <a href="#about">About</a>
+      <a href="#academics">Academics</a>
+      <a href="#badges">Badges</a>
+      <a href="#projects">Projects</a>
+      <a href="#gallery">Photos</a>
+      <a href="#beyond">Beyond</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================ HERO ============================ -->
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="eyebrow">PORTFOLIO · <span data-content="classOf">CLASS OF 2026</span></p>
+          <h1 class="hero__title" data-content="name">Student Name</h1>
+          <p class="hero__tagline" data-content="tagline">Building technology that makes learning accessible for students like me.</p>
+          <p class="hero__sub" data-content="heroSub"></p>
+          <div class="hero__cta">
+            <a href="#badges" class="btn btn--primary">View my badge case</a>
+            <a href="#contact" class="btn btn--ghost">Get in touch</a>
+          </div>
+        </div>
+        <figure class="hero__portrait reveal" data-photo="portrait" data-hint="Add your portrait → content.js: portrait"></figure>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll to content">
+        <span class="hero__scroll-pixel">press ▶ start</span>
+        <span class="hero__scroll-arrow" aria-hidden="true">▾</span>
+      </a>
+    </section>
+
+    <!-- ============================ ABOUT ============================ -->
+    <section class="section" id="about">
+      <div class="container about__grid">
+        <div class="about__story reveal">
+          <p class="eyebrow">ABOUT ME</p>
+          <h2>My story</h2>
+          <div data-content="about"><!-- paragraphs injected from content.js --></div>
+        </div>
+        <aside class="about__facts reveal">
+          <figure class="about__photo" data-photo="aboutImage" data-hint="Add a candid photo → content.js: aboutImage"></figure>
+          <p class="eyebrow">QUICK FACTS</p>
+          <dl data-content="quickFacts"><!-- injected --></dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============================ ACADEMICS ============================ -->
+    <section class="section section--alt" id="academics">
+      <div class="container">
+        <p class="eyebrow">ACADEMICS</p>
+        <h2>By the numbers</h2>
+        <div class="stats" data-content="stats"><!-- stat cards injected --></div>
+
+        <h3 class="academics__sub">Relevant coursework</h3>
+        <ul class="chips" data-content="coursework"><!-- chips injected --></ul>
+      </div>
+    </section>
+
+    <!-- ============================ BADGE CASE ============================ -->
+    <section class="section" id="badges">
+      <div class="container">
+        <p class="eyebrow">ACHIEVEMENTS &amp; PROJECTS</p>
+        <h2>My badge case</h2>
+        <p class="section__intro">Every award and project I've earned, collected like gym badges — tap one to see the full story. Prefer plain text? Use <em>View as list</em>.</p>
+
+        <div class="badges__controls">
+          <div class="filters" id="badgeFilters" role="tablist" aria-label="Filter badges by category"><!-- chips injected --></div>
+          <button class="toggle-view" id="toggleView" aria-pressed="false">View as list</button>
+        </div>
+
+        <!-- Badge case grid -->
+        <div class="badge-case" id="badgeCase">
+          <div class="badge-grid" id="badgeGrid" role="list"><!-- badges injected --></div>
+        </div>
+
+        <!-- Accessible list fallback (same data) -->
+        <div class="badge-list" id="badgeList" hidden><!-- list injected --></div>
+      </div>
+    </section>
+
+    <!-- ============================ LEADERSHIP / ACTIVITIES ============================ -->
+    <section class="section section--alt" id="leadership">
+      <div class="container">
+        <p class="eyebrow">LEADERSHIP &amp; ACTIVITIES</p>
+        <h2>What I lead &amp; do</h2>
+        <div class="activities" data-content="activities"><!-- cards injected --></div>
+      </div>
+    </section>
+
+    <!-- ============================ PROJECTS ============================ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <p class="eyebrow">THINGS I'VE BUILT</p>
+        <h2>Projects</h2>
+        <p class="section__intro">Each opens its badge for screenshots, tech stack, and links.</p>
+        <div class="projects" data-content="projects"><!-- project cards injected --></div>
+      </div>
+    </section>
+
+    <!-- ============================ GALLERY ============================ -->
+    <section class="section section--alt" id="gallery">
+      <div class="container">
+        <p class="eyebrow">IN PHOTOS</p>
+        <h2>Life in frames</h2>
+        <p class="section__intro">A few candid moments from outside the résumé — swap in your own.</p>
+        <div class="gallery" data-content="gallery"><!-- gallery injected --></div>
+      </div>
+    </section>
+
+    <!-- ============================ BEYOND ============================ -->
+    <section class="section" id="beyond">
+      <div class="container">
+        <p class="eyebrow">BEYOND THE CLASSROOM</p>
+        <h2>A few things that make me, me</h2>
+        <ul class="hobbies" data-content="hobbies"><!-- pixel tiles injected --></ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ CONTACT / FOOTER ============================ -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <p class="eyebrow">GET IN TOUCH</p>
+      <h2 class="footer__title">Let's talk</h2>
+      <p class="footer__lead">The fastest way to reach me is email — I read everything.</p>
+      <div class="footer__links" data-content="contactLinks"><!-- injected --></div>
+      <div class="footer__bottom">
+        <span data-content="name">Student Name</span> · Made with care · 2026
+        <a href="#hero" class="footer__top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================ BADGE MODAL ============================ -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel" role="document">
+      <button class="modal__close" data-close aria-label="Close">✕</button>
+      <div class="modal__body" id="modalBody"><!-- injected --></div>
+    </div>
+  </div>
+
+  <!-- content first, then shared icons, then logic -->
+  <script src="data/content.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

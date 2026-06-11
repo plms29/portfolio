@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail — Portfolio</title>
+  <meta name="description" content="A detailed look at one achievement or project.">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Silkscreen:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="detail-page">
+  <a class="skip-link" href="#detailRoot">Skip to content</a>
+
+  <header class="nav is-scrolled">
+    <div class="nav__inner">
+      <a href="index.html#hero" class="nav__brand" data-content="initials" aria-label="Home">SN</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html#about">About</a>
+        <a href="index.html#academics">Academics</a>
+        <a href="index.html#badges">Badges</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#beyond">Beyond</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="detailRoot" class="detail">
+    <!-- rendered by js/detail.js from data/content.js using ?id= -->
+    <noscript>
+      <div class="container" style="padding:96px 24px">
+        <p>This page needs JavaScript. Please return to the <a href="index.html#badges">badge case</a>.</p>
+      </div>
+    </noscript>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        <span data-content="name">Student Name</span> · Made with care · 2026
+        <a href="index.html#hero" class="footer__top">Back to portfolio ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data/content.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/detail.js"></script>
+  <script>
+  /* fill the brand initials + footer name from content.js */
+  (function () {
+    var C = window.CONTENT || {};
+    document.querySelectorAll('[data-content="initials"]').forEach(function (n) { if (C.initials) n.textContent = C.initials; });
+    document.querySelectorAll('[data-content="name"]').forEach(function (n) { if (C.name) n.textContent = C.name; });
+  })();
+  </script>
+</body>
+</html>
