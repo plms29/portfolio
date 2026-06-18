@@ -47,7 +47,7 @@ const CONTENT = {
   tagline: "Passionate about technology and building community projects, especially for the underprivileged.",
   heroSub: "Grade 11 student in Da Nang, coding enthusiast and founder of an initiative teaching SAT to disadvantaged children.",
   // A portrait photo for the hero (square or 4:5 works best, ~600px).
-  portrait: "assets/img/profile_pic.JPG",     // REPLACE: your headshot / portrait
+  portrait: "assets/img/profile_pic.JPG",
   email: "minhsonphamle@gmail.com",
   links: {
     linkedin: "#",
@@ -63,7 +63,7 @@ const CONTENT = {
     "Currently, I am focusing my efforts on an initiative that provides free SAT prep for disadvantaged students. I realized that while students in big cities have access to expensive test prep centers, equally capable students in rural areas are often left behind. I build tools and programs to bridge this gap and make quality education accessible to everyone."
   ],
   // A candid photo for the About section (you teaching, building, on location).
-  aboutImage: "assets/img/REPLACE-about.jpg",      // REPLACE
+  aboutImage: null,
   quickFacts: [
     { label: "Location", value: "Da Nang, Vietnam" },
     { label: "School", value: "Le Quy Don High School for the Gifted" },
@@ -83,7 +83,7 @@ const CONTENT = {
   coursework: [
     "AP Calculus AB", "AP Computer Science A", "AP Computer Science Principles",
     "Advanced Mathematics", "Specialized Information Technology", "Physics"
-  ], // REPLACE: your most relevant / advanced courses
+  ],
 
   /* ---- badge case: achievements, awards & projects ----------------------- */
   badges: [
@@ -146,7 +146,7 @@ const CONTENT = {
       detail: "Led and competed in major robotics and tech challenges. Won 1st Prize at the Samsung Innovation Tech Challenge 2025. In the FIRST Tech Challenge (FTC), achieved 2nd Place Alliance Captain (Vietnam '25-'26), 2nd Inspired Award ('24-'25), and 2nd Prize in the Run for the Robot Premier Event at Kentucky.",
       impact: "1st Prize Samsung, Multiple FTC Awards",
       links: [],
-      image: "assets/img/REPLACE-samsung-ftc.jpg"
+      image: null
     },
     {
       id: "sat-project",
@@ -170,28 +170,24 @@ const CONTENT = {
       role: "Software Engineer, EmoKid Project",
       period: "Sep 2025 – Jan 2026",
       impact: "Developed AI and software for an autism support robot. Won City 2nd Prize.",
-      image: "assets/img/REPLACE-emokid-activity.jpg",
       badge: "emokid"
     },
     {
       role: "Competitor, FIRST Tech Challenge & Samsung Innovation",
       period: "2024 – 2026",
       impact: "Won 1st Prize Samsung Innovation, 2nd Place Alliance Captain FTC.",
-      image: "assets/img/REPLACE-ftc-activity.jpg",
       badge: "robotics-awards"
     },
     {
       role: "Competitive Programmer",
       period: "2024 – 2026",
       impact: "4 Gold Medals in major Informatics Olympiads.",
-      image: "assets/img/REPLACE-cp.jpg",
       badge: "cp-medals"
     },
     {
       role: "Founder, SAT Prep Initiative",
       period: "2026 – present",
       impact: "Building a platform to democratize SAT prep for rural students.",
-      image: "assets/img/REPLACE-sat.jpg",
       badge: "sat-project"
     }
   ],
@@ -200,14 +196,7 @@ const CONTENT = {
   projects: ["emokid", "robotics-awards", "sat-project"],
 
   /* ---- photo gallery: candid shots that show personality ---------------- */
-  gallery: [
-    { src: "assets/img/REPLACE-gallery-1.jpg", alt: "EMOKID Project", caption: "Developing the EMOKID robot" },
-    { src: "assets/img/REPLACE-gallery-2.jpg", alt: "Samsung Innovation", caption: "1st Prize at Samsung Innovation Tech Challenge 2025" },
-    { src: "assets/img/REPLACE-gallery-3.jpg", alt: "FTC Competition", caption: "2nd Place Alliance Captain at FTC Vietnam" },
-    { src: "assets/img/REPLACE-gallery-4.jpg", alt: "Competitive Programming", caption: "Participating in Informatics Olympiad" },
-    { src: "assets/img/REPLACE-gallery-5.jpg", alt: "Coding", caption: "Working on the SAT Prep Platform" },
-    { src: "assets/img/REPLACE-gallery-6.jpg", alt: "Hobbies", caption: "Enjoying my free time" }
-  ],
+  gallery: [],
 
   /* ---- beyond the classroom (pixel-tile hobbies) ------------------------- */
   hobbies: [
