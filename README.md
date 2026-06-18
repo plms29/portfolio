@@ -1,159 +1,54 @@
-# Portfolio Website
+# Phạm Lê Minh Sơn (plms) - Portfolio
 
-A single-page personal portfolio for a Grade-12 student applying to U.S. universities.
-Clean navy + teal editorial design with a playful **Pokémon-style badge case** for
-achievements and projects, plus a roomy **detail page** for every badge. Vanilla
-HTML/CSS/JS — no build step, no dependencies.
-
-Paste the live URL into the Common App "personal website" field.
-
----
-
-## Quick start
-
-Just **double-click `index.html`** to open it in your browser. That's it — there's
-nothing to install or build.
-
-```
-/index.html        ← the home page (you rarely touch this)
-/detail.html       ← the per-badge full page (you rarely touch this)
-/css/style.css     ← all styling + design tokens (you don't touch this)
-/js/icons.js       ← shared badge emblems (you don't touch this)
-/js/main.js        ← home-page behaviour (you don't touch this)
-/js/detail.js      ← detail-page behaviour (you don't touch this)
-/data/content.js   ← ⭐ THE ONLY FILE YOU EDIT — all your content lives here
-/assets/
-  /img/            ← your photos & project screenshots (+ hero-bg.jpg)
-  /badges/         ← badge emblems (SVGs)
-  favicon.svg
-```
+<div align="center">
+  <h3>Software Engineer | AI Enthusiast | Tech for Social Good</h3>
+  <p>Da Nang, Vietnam • Class of 2027 • Intended CS Major</p>
+  <a href="https://github.com/plms29">GitHub</a> • <a href="mailto:minhsonphamle@gmail.com">Email</a>
+</div>
 
 ---
 
-## ✏️ Editing your content (do everything in `data/content.js`)
+## 👨‍💻 About Me
 
-Open **`data/content.js`** in any text editor. Everything you can change is in there,
-with comments explaining each field. You should never need to edit the HTML/CSS/JS.
+Hi, I'm **Minh Son**, a Grade 11 student at Le Quy Don High School for the Gifted in Da Nang, Vietnam. My journey in tech started with competitive programming and quickly evolved into a passion for machine learning and building real-world solutions. 
 
-What you can change:
+I strongly believe in leveraging technology to bridge gaps and empower vulnerable communities. Whether it's building an AI companion for autistic children or developing platforms to democratize education, I strive to create meaningful, high-impact software.
 
-- **Name, initials, tagline, hero sub-line** — top of the file.
-- **About / My story** — the `about` array (one string per paragraph).
-- **Quick facts** — location, school, intended major, etc.
-- **Academic stats** — GPA, SAT, IELTS… these animate with a count-up.
-  - Use `decimals` for non-whole numbers (e.g. GPA `3.95` → `decimals: 2`).
-  - Use `suffix` for things like `"/4.0"`, `"%"`, `"/9.0"`.
-- **Badges (achievements + projects)** — the `badges` array (see below).
-- **Activities, projects, hobbies, contact links.**
+## 🚀 Key Projects & Initiatives
 
-### Add a new badge (achievement or project)
+### 🤖 EmoKid — AI Robot for Autistic Children
+*(Sep 2025 – Jan 2026)*
+* **Role**: Lead Software Engineer
+* **Tech Stack**: Python, Wav2Vec2, Computer Vision (Haar Cascade & solvePnP), React, Supabase
+* **Impact**: 1st Prize School Science Fair, 2nd Prize City Science Fair. Tested with 8 autistic children, showing clear improvements in attention and initiation frequency.
+* **Details**: Co-developed a humanoid robot utilizing Applied Behavior Analysis (ABA) principles. Engineered real-time eye-tracking and behavioral metrics (AOS, IFI) on a Raspberry Pi 5 to adaptively adjust therapy prompts based on the child's engagement state.
 
-1. In the `badges` array, **copy an existing `{ ... }` block** and paste it.
-2. Edit the fields:
-   - `id` — a unique short slug (no spaces), e.g. `"essay-prize"`.
-   - `name` — short label shown in the pixel font (keep it ~1–2 words).
-   - `category` — one of `Academic`, `Leadership`, `Project`, `Service`, `Creative`.
-   - `rarity` — `common`, `rare`, or `legendary`. Use **legendary** (gold) for only
-     your 1–2 biggest achievements.
-   - `icon` — path to an emblem, e.g. `"assets/badges/trophy.svg"`.
-   - `title`, `period`, `detail` (2–4 sentences), and `impact` (a quantified line —
-     **use a real number**: "Taught 35 students", "Raised 20,000,000 VND").
-   - `links` — optional array of `{ label, url }`.
-   - `tech` — optional array of strings (for projects).
-   - `image` — optional screenshot path in `assets/img/`. Leave `null` to skip.
-   - `page` — optional long write-up shown on the full detail page (see below).
+### 📚 Free SAT Prep Platform
+*(2026 – Present)*
+* **Role**: Founder & Developer
+* **Tech Stack**: Web Development 
+* **Details**: Currently building an accessible web platform to provide free, high-quality SAT preparation materials for disadvantaged and rural students, aiming to close the educational opportunity gap.
 
-### Use your own badge artwork
+## 🏆 Selected Awards & Achievements
 
-The included emblems (`book`, `trophy`, `beaker`, `code`, `heart`, `robot`, `rocket`,
-`palette`) are simple originals that automatically tint to match the badge. To use your
-own, drop an `.svg` or `.png` into `assets/badges/` and point `icon` at it. (Custom files
-keep their own colours rather than auto-tinting — that's fine.)
+* **🥇 4x Gold Medals in Competitive Programming**: Traditional 30/4 Olympiad, Central-Western Highlands Informatics Olympiad, and HSGS Olympiad (2025 & 2026).
+* **🏆 1st Prize**: Samsung Innovation Tech Challenge (2025).
+* **🥈 FIRST Tech Challenge (FTC)**: 2nd Place Alliance Captain (Vietnam '25-'26), 2nd Inspired Award ('24-'25), and 2nd Prize at the Run for the Robot Premier Event (Kentucky).
 
-### Write a full detail page for a badge
+## 🛠️ Technical Skills
 
-Clicking a badge opens a quick **preview modal**. That modal has a **"Read the full
-page →"** button that opens a roomy, readable page (`detail.html?id=<the badge's id>`)
-— perfect for the long version of the story. You write that content inside the badge
-object in `data/content.js`, in a `page` field:
+* **Languages**: C++, Python, JavaScript/HTML/CSS
+* **Technologies & Domains**: Machine Learning (Wav2Vec2), Computer Vision, Full-stack Web Development, Raspberry Pi, Supabase
 
-```js
-page: {
-  cover: "assets/img/REPLACE-cover.jpg",   // optional banner image (or null)
-  lead:  "One strong opening sentence.",
-  blocks: [
-    { type: "heading", text: "The problem" },
-    { type: "text",    text: "A paragraph of writing." },
-    { type: "list",    items: ["point one", "point two"] },
-    { type: "image",   src: "assets/img/REPLACE-x.jpg", alt: "…", caption: "…" },
-    { type: "quote",   text: "A pull quote.", cite: "Who said it" },
-    { type: "stat",    value: "1,200+", label: "active users" }
-  ]
-}
-```
+## 📈 Academic Profile
 
-- See the **LearnLocal** project in `data/content.js` for a complete example.
-- No `page` yet? The detail page still opens and shows the basics plus a reminder
-  to add one — nothing breaks.
-- The **Leadership** cards and **Projects** also link to these detail pages. A
-  Leadership card links via its `badge:` field — set it to a badge `id`.
-- Prefer a hand-written custom page or an external link? Add
-  `pageUrl: "pages/my-page.html"` (or a full `https://…` URL) to the badge and the
-  button/links go straight there instead of `detail.html`.
+* **GPA**: 4.0/4.0
+* **IELTS**: 7.5/9.0
+* **AP Subjects**: Calculus AB, Computer Science A, Computer Science Principles
 
-### Swap in photos
+## 🤝 Let's Connect!
 
-Put your headshot and project screenshots into `assets/img/` and point the badge's
-`image` field (and the `page` images) at them. Until you do, the modal and detail page
-show a clearly-labelled `REPLACE:` placeholder block instead of a broken image.
-
-### Change the hero background image
-
-The big background photo behind the hero lives at `assets/img/hero-bg.jpg`. To swap it,
-drop in your own image with that exact name (a dark, high-resolution abstract works best
-so the light text stays readable). Free 4K sources:
-[Unsplash](https://unsplash.com/s/photos/navy-blue-abstract) or
-[Pexels](https://www.pexels.com/).
-
-### Find every placeholder
-
-Search the project for **`REPLACE`** — every spot that needs your real content is
-marked with that word. Replace them all before you go live.
-
-> Keep every impact line **quantified** with real numbers. Do **not** leave the sample
-> awards in as if they were yours — they are placeholders.
+I am always open to discussing technology, collaborating on impactful projects, or exploring new opportunities. Feel free to reach out via [Email](mailto:minhsonphamle@gmail.com) or connect with me here on GitHub.
 
 ---
-
-## 🚀 Deploy (get a public URL)
-
-Pick **one**:
-
-### Option A — GitHub Pages (free)
-1. Create a public GitHub repo and push this folder to the `main` branch.
-2. Repo → **Settings → Pages** → "Deploy from a branch" → branch `main`, folder `/root`.
-3. Wait ~1 minute. Your URL: `https://<username>.github.io/<repo>/`.
-
-### Option B — Netlify (free, drag-and-drop)
-1. Go to [app.netlify.com/drop](https://app.netlify.com/drop).
-2. Drag this whole folder onto the page. You get an instant URL (custom domain optional).
-
-### Option C — Vercel
-1. Import the GitHub repo at [vercel.com/new](https://vercel.com/new) (no framework / "Other").
-2. Deploy → instant URL.
-
-**Before pasting into the Common App:** open the live HTTPS URL and check that fonts,
-badges, detail pages, and images all load correctly on both phone and desktop.
-
-To update after deploying: edit `data/content.js`, then push to GitHub (Pages/Vercel
-redeploy automatically) or re-drag the folder to Netlify.
-
----
-
-## Accessibility & quality notes
-
-- Works keyboard-only; badges are real buttons; the modal traps focus and closes on `Esc`.
-- "View as list" toggle gives a plain, scannable version of the same badge data.
-- Detail pages are plain, readable documents that work without the modal.
-- Respects `prefers-reduced-motion` (animations turn off).
-- Navy + teal palette meets WCAG AA contrast for body text.
+*This repository contains the source code for my personal portfolio website. Feel free to explore!*
