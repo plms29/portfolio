@@ -40,268 +40,183 @@
 
 const CONTENT = {
   /* ---- identity ---------------------------------------------------------- */
-  initials: "SN",                                  // REPLACE: logo wordmark (student initials)
-  name: "Student Name",                            // REPLACE: full name
-  classOf: "CLASS OF 2026",
+  initials: "plms",
+  name: "Phạm Lê Minh Sơn",
+  classOf: "CLASS OF 2027",
   // The "spike" — one line that captures who you are. Keep it concrete.
-  tagline: "Building technology that makes learning accessible for students like me.", // REPLACE
-  heroSub: "Grade-12 student in Vietnam, self-taught developer, and founder of a free coding program for my hometown.", // REPLACE
+  tagline: "Passionate about technology and building community projects, especially for the underprivileged.",
+  heroSub: "Grade 11 student in Da Nang, coding enthusiast and founder of an initiative teaching SAT to disadvantaged children.",
   // A portrait photo for the hero (square or 4:5 works best, ~600px).
-  portrait: "assets/img/REPLACE-portrait.jpg",     // REPLACE: your headshot / portrait
-  email: "student@example.com",                    // REPLACE: contact email
+  portrait: "assets/img/profile_pic.JPG",     // REPLACE: your headshot / portrait
+  email: "minhsonphamle@gmail.com",
   links: {
-    linkedin: "https://www.linkedin.com/in/REPLACE", // REPLACE
-    github: "https://github.com/REPLACE",            // REPLACE
-    location: "Da Nang, Vietnam"                      // REPLACE
+    linkedin: "#",
+    github: "https://github.com/plms29",
+    location: "Da Nang, Vietnam"
   },
 
   /* ---- about / my story -------------------------------------------------- */
   // 2-3 short, human, first-person paragraphs. This is the emotional core.
   about: [
-    "I grew up in a coastal town where the nearest coding class was a four-hour bus ride away. REPLACE: the place you're from and what it was like.", // REPLACE
-    "When I was 15 I taught myself to build my first website from free YouTube tutorials and a borrowed laptop. The first time a classmate used something I made, I realised technology could close the gap I had felt my whole life. REPLACE: the moment that sparked your interest.", // REPLACE
-    "Since then I've spent my time building tools and running programs that put learning within reach of students who, like me, didn't start with much. REPLACE: what you care about and why." // REPLACE
+    "My journey in tech began with competitive programming, which sparked a deep curiosity about how systems work and eventually led me to explore machine learning.",
+    "I believe technology should be used to solve real-world problems. This belief drove me to build a Raspberry Pi-powered robot to assist autistic children, showing me the profound impact tech can have on vulnerable communities.",
+    "Currently, I am focusing my efforts on an initiative that provides free SAT prep for disadvantaged students. I realized that while students in big cities have access to expensive test prep centers, equally capable students in rural areas are often left behind. I build tools and programs to bridge this gap and make quality education accessible to everyone."
   ],
   // A candid photo for the About section (you teaching, building, on location).
   aboutImage: "assets/img/REPLACE-about.jpg",      // REPLACE
   quickFacts: [
-    { label: "Location", value: "Da Nang, Vietnam" },     // REPLACE
-    { label: "School", value: "REPLACE: High School" },   // REPLACE
-    { label: "Intended major", value: "Computer Science" },// REPLACE
-    { label: "Languages", value: "Vietnamese, English" }, // REPLACE
-    { label: "Currently learning", value: "Machine learning + UI design" } // REPLACE
+    { label: "Location", value: "Da Nang, Vietnam" },
+    { label: "School", value: "Le Quy Don High School for the Gifted" },
+    { label: "Intended major", value: "Computer Science" },
+    { label: "Languages", value: "Vietnamese, English, C++, Python" },
+    { label: "Currently learning", value: "Web Development, AI" }
   ],
 
   /* ---- academics --------------------------------------------------------- */
   // Stat row with count-up. Use `suffix` for things like "%" or "/9.0".
   // Set `decimals` if the number isn't a whole integer (e.g. GPA 3.95).
   stats: [
-    { value: 3.95, decimals: 2, suffix: "/4.0", label: "GPA (unweighted)" }, // REPLACE
-    { value: 1520, suffix: "",  label: "SAT" },                              // REPLACE
-    { value: 8.0,  decimals: 1, suffix: "/9.0", label: "IELTS" },            // REPLACE
-    { value: 5,    suffix: "",  label: "AP subjects" }                       // REPLACE
+    { value: 4.0, decimals: 1, suffix: "/4.0", label: "GPA" },
+    { value: 7.5, decimals: 1, suffix: "/9.0", label: "IELTS" },
+    { value: 3, suffix: "", label: "AP Subjects" }
   ],
   coursework: [
-    "AP Calculus BC", "AP Computer Science A", "AP Physics C",
-    "AP Statistics", "AP English Language", "Linear Algebra (self-study)"
+    "AP Calculus AB", "AP Computer Science A", "AP Computer Science Principles",
+    "Advanced Mathematics", "Specialized Information Technology", "Physics"
   ], // REPLACE: your most relevant / advanced courses
 
   /* ---- badge case: achievements, awards & projects ----------------------- */
   badges: [
     {
-      id: "edtech-app",
-      name: "LAUNCH",
+      id: "emokid",
+      name: "INNOVATOR",
       category: "Project",
       rarity: "legendary",
-      icon: "assets/badges/rocket.svg",
-      title: "LearnLocal — free study app for rural students", // REPLACE
-      period: "2024 – present",
-      detail: "Designed and built a mobile-friendly web app that delivers offline-capable lessons in Vietnamese. Started as a weekend project; now used across several schools in my province.", // REPLACE
-      impact: "1,200+ active student users",  // REPLACE: keep it a real number
-      tech: ["JavaScript", "Service Workers", "Firebase"],
-      links: [
-        { label: "Live demo", url: "#" },     // REPLACE
-        { label: "GitHub", url: "#" }          // REPLACE
-      ],
-      image: "assets/img/REPLACE-learnlocal.jpg", // REPLACE: screenshot
-      // Full write-up shown on detail.html?id=edtech-app (the "Read full page" button).
-      page: {                                     // REPLACE all text below with your real story
-        cover: "assets/img/REPLACE-learnlocal-cover.jpg",
-        lead: "LearnLocal started as a question I couldn't shake: why should a student's postcode decide what they get to learn?",
+      icon: "assets/badges/robot.svg",
+      title: "EmoKid — AI Robot for Autistic Children",
+      period: "Sep 2025 – Jan 2026",
+      detail: "Co-developed an AI-powered humanoid robot to assist autistic children. I led the software engineering, evolving the system from voice-based emotion recognition (Wav2Vec2) to a comprehensive non-verbal behavioral analysis system applying Applied Behavior Analysis (ABA) principles.",
+      impact: "1st Prize School, 2nd Prize City Science Fair",
+      tech: ["Python", "Wav2Vec2", "Computer Vision", "Supabase"],
+      links: [],
+      image: "assets/img/image3.jpg",
+      page: {
+        cover: "assets/img/image7.png",
+        lead: "EmoKid was born from the desire to make autism therapy more accessible and engaging through technology.",
         blocks: [
           { type: "heading", text: "The problem" },
-          { type: "text", text: "REPLACE: Describe the problem you saw. Who is affected, and how did you experience it personally? Two or three honest sentences land better than buzzwords." },
-          { type: "heading", text: "What I built" },
-          { type: "text", text: "REPLACE: Explain what the project actually does, in plain language. Then get specific about the hard part you solved — e.g. offline lessons via service workers so it works without reliable internet." },
+          { type: "text", text: "Therapy for children with Autism Spectrum Disorder (ASD) is often expensive and inaccessible for many families in Vietnam. Existing social robots are costly, lack Vietnamese language support, and often rely too heavily on verbal communication, which isn't suitable for all autistic children." },
+          { type: "heading", text: "Phase 1: Verbal Emotion Recognition" },
+          { type: "text", text: "Initially, I focused on verbal communication. I fine-tuned a Wav2Vec2 model for Vietnamese Speech Emotion Recognition (SER) to help the robot understand the child's emotional state, and integrated a Large Language Model (Gemini) with Cognitive Behavioral Therapy (CBT) prompting for natural conversations." },
+          { type: "heading", text: "Phase 2: Non-Verbal Behavioral Analysis (ABA)" },
+          { type: "text", text: "Realizing that many autistic children struggle with verbal communication, we evolved EmoKid to focus on non-verbal interaction. I developed a system that uses computer vision (Haar Cascade & solvePnP) for eye-tracking to calculate Attention Orientation Score (AOS), alongside touch and force sensors to measure Engagement and Response Latency." },
           { type: "list", items: [
-            "REPLACE: key feature or decision #1",
-            "REPLACE: key feature or decision #2",
-            "REPLACE: key feature or decision #3"
+            "Trained Wav2Vec2-base-Vietnamese-250h achieving 85.1% test accuracy.",
+            "Implemented real-time eye-tracking and behavioral metrics (AOS, IFI, RL, DR, TII) on a Raspberry Pi 5.",
+            "Developed an adaptive therapy mechanism based on Applied Behavior Analysis (ABA) that automatically adjusts prompt levels and wait times depending on the child's engagement state.",
+            "Built a full-stack React & Supabase dashboard for parents to track their child's behavioral progress."
           ] },
-          { type: "image", src: "assets/img/REPLACE-learnlocal-screen.jpg", alt: "Screenshot of the app", caption: "REPLACE: a screenshot of the product" },
           { type: "heading", text: "Impact" },
-          { type: "stat", value: "1,200+", label: "active student users" }, // REPLACE
-          { type: "text", text: "REPLACE: What changed because this exists? Use numbers and one short, concrete story of a single user if you have one." },
-          { type: "quote", text: "REPLACE: a short quote from a teacher, user, or mentor — optional but powerful.", cite: "REPLACE: who said it" },
-          { type: "heading", text: "What I learned" },
-          { type: "text", text: "REPLACE: A reflective paragraph. Admissions officers love growth — what surprised you, what you'd do differently, where you're taking it next." }
+          { type: "stat", value: "2", label: "Science Fair Awards (School 1st, City 2nd)" },
+          { type: "text", text: "Tested with 8 autistic children over 7 days, the system showed clear improvements in attention (AOS) and initiation frequency (IFI), proving the viability of affordable, adaptive AI companions for ASD intervention." }
         ]
       }
     },
     {
-      id: "math-olympiad",
-      name: "MATH MEDAL",
+      id: "cp-medals",
+      name: "GOLD",
       category: "Academic",
       rarity: "legendary",
       icon: "assets/badges/trophy.svg",
-      title: "National Mathematics Olympiad — Silver Medal", // REPLACE
-      period: "2025",
-      detail: "Placed among the top competitors nationally after two rounds of written exams. Spent the year before training with past papers every morning before school.", // REPLACE
-      impact: "Top 3% of 4,000+ competitors", // REPLACE
-      links: [{ label: "Certificate", url: "#" }], // REPLACE
-      image: null
-    },
-    {
-      id: "coding-club",
-      name: "FOUNDER",
-      category: "Leadership",
-      rarity: "rare",
-      icon: "assets/badges/robot.svg",
-      title: "Founder — Free Coding Club", // REPLACE
-      period: "2023 – present",
-      detail: "Started a weekly after-school program teaching web development to peers with no prior access. Wrote the curriculum from scratch and recruited two co-teachers.", // REPLACE
-      impact: "Taught 35+ students over 1 year", // REPLACE
-      links: [],
-      image: null,
-      page: {                                     // REPLACE with your real story
-        cover: null,
-        lead: "I never planned to teach. I just had a laptop, a borrowed projector, and a list of friends who wanted to learn to code.",
-        blocks: [
-          { type: "heading", text: "Why I started it" },
-          { type: "text", text: "REPLACE: What gap were you filling? Why you?" },
-          { type: "heading", text: "How it runs" },
-          { type: "text", text: "REPLACE: Format, curriculum, how you recruited co-teachers, how you kept it going for a year." },
-          { type: "stat", value: "35+", label: "students taught" }, // REPLACE
-          { type: "heading", text: "What it taught me" },
-          { type: "text", text: "REPLACE: Leadership lessons, a moment that mattered, where it goes next." }
-        ]
-      }
-    },
-    {
-      id: "robotics",
-      name: "CAPTAIN",
-      category: "Leadership",
-      rarity: "rare",
-      icon: "assets/badges/robot.svg",
-      title: "Captain — School Robotics Team", // REPLACE
-      period: "2024",
-      detail: "Led a six-member team through design, build, and competition seasons. Coordinated practice schedules and mentored two first-year members.", // REPLACE
-      impact: "Led 6 members to regional finals", // REPLACE
+      title: "Multiple Gold Medals — Informatics Olympiads",
+      period: "2024 – 2026",
+      detail: "Secured Gold Medals in several prestigious competitive programming competitions, including the Traditional 30/4 Olympiad, Central-Western Highlands Informatics Olympiad, and HSGS Olympiad (2025 & 2026).",
+      impact: "4 Gold Medals",
       links: [],
       image: null
     },
     {
-      id: "science-fair",
-      name: "RESEARCH",
-      category: "Academic",
-      rarity: "common",
-      icon: "assets/badges/beaker.svg",
-      title: "Regional Science Fair — 1st Place", // REPLACE
-      period: "2024",
-      detail: "Built a low-cost water-quality sensor and presented the findings to a panel of university judges.", // REPLACE
-      impact: "1st of 60 projects", // REPLACE
-      links: [{ label: "Poster (PDF)", url: "#" }], // REPLACE
-      image: null
-    },
-    {
-      id: "tutor",
-      name: "MENTOR",
-      category: "Service",
-      rarity: "common",
-      icon: "assets/badges/heart.svg",
-      title: "Volunteer Tutor — Rural Primary School", // REPLACE
-      period: "2022 – present",
-      detail: "Travelled most weekends to teach reading and basic computer skills to younger students in a village school without a computer lab.", // REPLACE
-      impact: "80+ volunteer hours", // REPLACE
-      links: [],
-      image: null
-    },
-    {
-      id: "hackathon",
-      name: "HACK",
+      id: "robotics-awards",
+      name: "CHAMPION",
       category: "Project",
+      rarity: "rare",
+      icon: "assets/badges/rocket.svg",
+      title: "Robotics & Innovation Champion",
+      period: "2024 – 2026",
+      detail: "Led and competed in major robotics and tech challenges. Won 1st Prize at the Samsung Innovation Tech Challenge 2025. In the FIRST Tech Challenge (FTC), achieved 2nd Place Alliance Captain (Vietnam '25-'26), 2nd Inspired Award ('24-'25), and 2nd Prize in the Run for the Robot Premier Event at Kentucky.",
+      impact: "1st Prize Samsung, Multiple FTC Awards",
+      links: [],
+      image: "assets/img/REPLACE-samsung-ftc.jpg"
+    },
+    {
+      id: "sat-project",
+      name: "FOUNDER",
+      category: "Service",
       rarity: "rare",
       icon: "assets/badges/code.svg",
-      title: "City Youth Hackathon — Best Social Impact", // REPLACE
-      period: "2024",
-      detail: "In 24 hours, built a tool that maps free study resources near a student's location. Won the social-impact track with two teammates.", // REPLACE
-      impact: "1st of 22 teams", // REPLACE
-      tech: ["React", "Leaflet", "Node"],
-      links: [{ label: "GitHub", url: "#" }], // REPLACE
-      image: "assets/img/REPLACE-hackathon.jpg" // REPLACE
-    },
-    {
-      id: "magazine",
-      name: "EDITOR",
-      category: "Creative",
-      rarity: "common",
-      icon: "assets/badges/palette.svg",
-      title: "Design Editor — School Magazine", // REPLACE
-      period: "2023 – 2024",
-      detail: "Redesigned the school magazine's layout and cover system, and trained the next year's design team.", // REPLACE
-      impact: "Doubled readership to 600 copies", // REPLACE
+      title: "Free SAT Prep Platform",
+      period: "2026 – present",
+      detail: "Currently building a web platform aimed at providing free, high-quality SAT preparation materials and courses for disadvantaged students to bridge the educational gap.",
+      impact: "In development",
+      tech: ["Web Development"],
       links: [],
       image: null
-    },
-    // Optional "locked" slots that hint at goals. Set locked:true; they show a
-    // greyed "??? coming soon" tile and are not clickable. Delete if unwanted.
-    {
-      id: "locked-1",
-      name: "??? ",
-      category: "Project",
-      rarity: "common",
-      locked: true
     }
   ],
 
   /* ---- extracurriculars / leadership (cards) ----------------------------- */
-  // Note: many of these also appear as badges. Set `badge` to a badge id and the
-  // card becomes clickable → opens that badge's full detail page (detail.html?id=…).
-  // Leave `badge` off (or set null) for a non-clickable card.
   activities: [
     {
-      role: "Founder, Free Coding Club",
-      period: "2023 – present",
-      impact: "Taught 35+ peers, built a 0→1 curriculum, weekly sessions for 1 year.", // REPLACE
-      image: "assets/img/REPLACE-coding-club.jpg", // REPLACE: a photo from this activity
-      badge: "coding-club"
+      role: "Software Engineer, EmoKid Project",
+      period: "Sep 2025 – Jan 2026",
+      impact: "Developed AI and software for an autism support robot. Won City 2nd Prize.",
+      image: "assets/img/REPLACE-emokid-activity.jpg",
+      badge: "emokid"
     },
     {
-      role: "Captain, School Robotics Team",
-      period: "2024",
-      impact: "Led 6 members to regional finals.", // REPLACE
-      image: "assets/img/REPLACE-robotics.jpg", // REPLACE: a photo from this activity
-      badge: "robotics"
+      role: "Competitor, FIRST Tech Challenge & Samsung Innovation",
+      period: "2024 – 2026",
+      impact: "Won 1st Prize Samsung Innovation, 2nd Place Alliance Captain FTC.",
+      image: "assets/img/REPLACE-ftc-activity.jpg",
+      badge: "robotics-awards"
     },
     {
-      role: "Volunteer Tutor, Rural Primary School",
-      period: "2022 – present",
-      impact: "80+ hours teaching reading and computer basics.", // REPLACE
-      image: "assets/img/REPLACE-tutor.jpg", // REPLACE: a photo from this activity
-      badge: "tutor"
+      role: "Competitive Programmer",
+      period: "2024 – 2026",
+      impact: "4 Gold Medals in major Informatics Olympiads.",
+      image: "assets/img/REPLACE-cp.jpg",
+      badge: "cp-medals"
     },
     {
-      role: "Design Editor, School Magazine",
-      period: "2023 – 2024",
-      impact: "Redesigned layout; doubled readership to 600 copies.", // REPLACE
-      image: "assets/img/REPLACE-magazine.jpg", // REPLACE: a photo from this activity
-      badge: "magazine"
+      role: "Founder, SAT Prep Initiative",
+      period: "2026 – present",
+      impact: "Building a platform to democratize SAT prep for rural students.",
+      image: "assets/img/REPLACE-sat.jpg",
+      badge: "sat-project"
     }
   ],
 
   /* ---- projects (list view; the badge modals carry the detail) ----------- */
-  // These reference badge ids above so clicking opens the same modal.
-  projects: ["edtech-app", "hackathon"],
+  projects: ["emokid", "robotics-awards", "sat-project"],
 
   /* ---- photo gallery: candid shots that show personality ---------------- */
-  // Add as many as you like — 6 looks balanced. Square images work best.
   gallery: [
-    { src: "assets/img/REPLACE-gallery-1.jpg", alt: "REPLACE: what's happening here", caption: "REPLACE: short caption" },
-    { src: "assets/img/REPLACE-gallery-2.jpg", alt: "REPLACE", caption: "REPLACE" },
-    { src: "assets/img/REPLACE-gallery-3.jpg", alt: "REPLACE", caption: "REPLACE" },
-    { src: "assets/img/REPLACE-gallery-4.jpg", alt: "REPLACE", caption: "REPLACE" },
-    { src: "assets/img/REPLACE-gallery-5.jpg", alt: "REPLACE", caption: "REPLACE" },
-    { src: "assets/img/REPLACE-gallery-6.jpg", alt: "REPLACE", caption: "REPLACE" }
+    { src: "assets/img/REPLACE-gallery-1.jpg", alt: "EMOKID Project", caption: "Developing the EMOKID robot" },
+    { src: "assets/img/REPLACE-gallery-2.jpg", alt: "Samsung Innovation", caption: "1st Prize at Samsung Innovation Tech Challenge 2025" },
+    { src: "assets/img/REPLACE-gallery-3.jpg", alt: "FTC Competition", caption: "2nd Place Alliance Captain at FTC Vietnam" },
+    { src: "assets/img/REPLACE-gallery-4.jpg", alt: "Competitive Programming", caption: "Participating in Informatics Olympiad" },
+    { src: "assets/img/REPLACE-gallery-5.jpg", alt: "Coding", caption: "Working on the SAT Prep Platform" },
+    { src: "assets/img/REPLACE-gallery-6.jpg", alt: "Hobbies", caption: "Enjoying my free time" }
   ],
 
   /* ---- beyond the classroom (pixel-tile hobbies) ------------------------- */
   hobbies: [
-    { icon: "🎹", label: "Piano" },        // REPLACE
-    { icon: "📷", label: "Photography" },  // REPLACE
-    { icon: "♟️", label: "Chess" },         // REPLACE
-    { icon: "🏀", label: "Basketball" },   // REPLACE
-    { icon: "🥾", label: "Hiking" },        // REPLACE
-    { icon: "🍜", label: "Cooking" }        // REPLACE
+    { icon: "💻", label: "Coding" },
+    { icon: "🤖", label: "Robotics" },
+    { icon: "🎱", label: "Billiards" },
+    { icon: "⚽", label: "Football" },
+    { icon: "🎵", label: "Music" },
+    { icon: "📚", label: "Reading" }
   ]
 };
 
